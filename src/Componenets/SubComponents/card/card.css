@@ -1,0 +1,126 @@
+@media (max-width: 575.98px) {
+  .custom-card-body {
+    padding: 10px;
+  }
+  .custom-card-title {
+    font-size: 1.2rem;
+  }
+  .custom-card-text {
+    -webkit-line-clamp: 2;
+    height: 100px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .custom-card-body {
+    padding: 10px;
+  }
+  .custom-card-title {
+    font-size: 1.5rem;
+  }
+  .custom-card-text {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .custom-card-body {
+    padding: 10px;
+  }
+  .custom-card-title {
+    font-size: 1.8rem;
+  }
+  .custom-card-text {
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .custom-card-body {
+    padding: 10px;
+  }
+  .custom-card-title {
+    font-size: 2rem;
+  }
+  .custom-card-text {
+    height: 100px;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  .custom-card-body {
+    padding: 10px;
+  }
+  .custom-card-title {
+    font-size: 2rem;
+    height: auto !important;
+  }
+  .custom-card-text {
+    -webkit-line-clamp: 5;
+
+  }
+}
+
+@media (min-width: 1200px) {
+    .custom-card-title {
+    font-size: 2.5rem;
+  }
+  .custom-card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+
+
+
+
+
+
+.custom-card {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #034f84;
+  transition: all 0.3s ease;
+}
+.custom-card-title {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 10px;
+}
+.custom-card-body {
+  border-radius: 10px;
+  width: auto;
+  padding: 30px;
+}
+.custom-card-title {
+  padding: 0;
+}
+.custom-card-button {
+  background-color: white;
+  border: 2px solid #034f84;
+  color: #034f84;
+  padding: 4px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.custom-card-button:hover {
+  color: #ffffff;
+  background-color: #034f84;
+  border: 2px solid white;
+  transform: scale(1.1) !important;
+}
+
+.custom-card:hover
+{
+    background-color: white;
+    color: #034f84;
+    border:2px solid #034f84;
+    transform: scale(1.03) !important;
+    filter: drop-shadow(5px 5px 20px  #7e8403);
+}

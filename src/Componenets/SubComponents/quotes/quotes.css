@@ -1,0 +1,71 @@
+.cd-section {
+  background-image: url("/cta-bg.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.quote-section {
+  background-color: rgba(3, 78, 132, 0.85);
+  border-radius: 20px;
+  max-width: 1200px;
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 500;
+  line-height: 1.8;
+  position: relative;
+}
+
+.quote-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsla(225, 66%, 10%, 0.707);
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px); }
+
+i {
+  font-size: 1.15rem;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c7d2fe;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.quote-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.848);
+}
+
+/* @media (max-width: 768px) {
+  .quote-section {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .quote-box {
+    margin-bottom: 20px;
+  }
+  .cd-section {
+    height: 130vh;
+  }
+} */

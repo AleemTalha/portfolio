@@ -1,0 +1,17 @@
+.wa-icon
+{
+    color: white;
+    background-color: green;
+    border-radius: 30px;
+    padding: 3px 10px !important;
+    font-size: 30px;
+    bottom: 10px;
+    position: fixed;
+    right: 10px;
+    border: 2px solid green;
+    transition: all 0.4s linear;
+}
+.wa-icon:hover {
+    background-color: white !important;
+    color: green !important;
+}

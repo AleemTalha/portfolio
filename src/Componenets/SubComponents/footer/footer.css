@@ -1,0 +1,44 @@
+.icon_instagram {
+  color: #e4405f;
+  background-color: white;
+}
+
+.icon_linkedin {
+  color: white;
+  background-color: #0077b5; /* LinkedIn color */
+}
+
+.icon_facebook {
+  background-color: #003ebb;
+  color: #f8f8f8; /* Facebook color */
+}
+
+.icon_github {
+  color: white;
+  background-color: #6e5494; /* GitHub color */
+}
+
+.icon_instagram:hover {
+  color: white;
+  background-color: #e4405f; /* Instagram color on hover */
+}
+
+.icon_linkedin:hover {
+  color: #0077b5;
+  background-color: white; /* LinkedIn color on hover */
+}
+
+.icon_facebook:hover {
+  color: #003ebb;
+  background-color: white; /* Facebook color on hover */
+}
+
+.icon_github:hover {
+  color: #171717;
+  background-color: white; /* GitHub color on hover */
+}
+footer {
+  background: linear-gradient(to bottom left, #003ebb, #09122c, #872341);
+}
+
+

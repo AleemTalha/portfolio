@@ -1,0 +1,160 @@
+.img-wrapper-1, .img-wrapper-2 {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+}
+
+.img-wrapper-1 {
+  justify-content: end;
+}
+
+.img-wrapper-2 {
+  justify-content: start;
+}
+
+.like img {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.like img:hover {
+  transform: scale(1.05) !important;
+}
+
+.custom-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background:  #872341d6;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.989);
+}
+
+.flip-card-back h1 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.flip-card-back p {
+  font-size: 1rem;
+}
+
+@media (min-width: 1400px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 280px;
+    height: 280px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 260px;
+    height: 260px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 240px;
+    height: 240px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 991px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 220px;
+    height: 220px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 200px;
+    height: 200px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 575px) {
+  .custom-img, .flip-card, .flip-card-front img, .flip-card-back {
+    width: 150px;
+    height: 150px;
+  }
+  .img-4 .custom-img, .img-2 .custom-img {
+    width: 110px;
+    height: 110px;
+  }
+}
+
