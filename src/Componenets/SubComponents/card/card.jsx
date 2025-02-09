@@ -5,7 +5,7 @@ const CustomCard = (props) => {
   return (
     <div className="text-center custom-card">
       {props.image && (
-        <img className="custom-card-img" src={props.image} alt="Card" />
+        <img className="custom-card-img" loading="lazy" src={props.image} alt="Card" />
       )}
       <div className="custom-card-body">
         <div className="card-body-text">

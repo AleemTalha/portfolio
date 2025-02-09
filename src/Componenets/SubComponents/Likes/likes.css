@@ -158,3 +158,47 @@
   }
 }
 
+
+.fs-custom {
+  font-size: 1.2rem !important;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) { 
+  .fs-custom {
+    font-size: 1.1rem !important ;
+  }
+}
+
+@media (max-width: 992px) { 
+  .fs-custom {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) { 
+  .fs-custom {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 576px) { 
+  .fs-custom {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (max-width: 420px) { 
+  .fs-custom {
+    font-size: 0.6rem !important;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 320px) { 
+  .fs-custom {
+    font-size: 0.5rem !important;
+    padding: 6px;
+  }
+}

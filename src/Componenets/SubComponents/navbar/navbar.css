@@ -25,3 +25,14 @@ a
   border: 3px solid white !important;
   transform: scale(1.05) !important;
 }
+
+
+nav {
+  transition: all .5s ease;
+}
+
+@media (max-width: 800px) {
+  nav {
+    transition: all 1s ease;
+  }
+}

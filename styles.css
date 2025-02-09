@@ -2,11 +2,15 @@
 }
 
 body {
-  font-family: "Raleway", serif !important;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FFEB3B" stroke="%23034F84" stroke-width="3"></circle></svg>')
+  font-family: "Raleway", sans-serif !important;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FFEB3B" stroke="%23034F84" stroke-width="3"></circle></svg>')
       12 12,
     auto !important;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeSpeed;
 }
+
 * {
   scroll-behavior: smooth;
   cursor: inherit !important;
@@ -16,10 +20,11 @@ body {
 
 a:hover,
 button:hover {
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="%23FFEB3B" stroke-width="3"></circle></svg>')
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="%23FFEB3B" stroke-width="3"></circle></svg>')
       12 12,
     auto !important;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,43 +42,46 @@ html {
   background-color: transparent;
 }
 
-scrollbar {
-  width: 8px;
-  background-color: #f1f1f1;
-}
-
-scrollbar-thumb {
-  background-color: 09122c;
-  border-radius: 10px;
-}
-
-a {
+a,
+NavLink {
   font-weight: normal;
   --b: 0.1em;
   --c: #ffffff;
-
   padding-block: var(--b);
   background: linear-gradient(var(--c) 50%, #000 0) 0%
-  calc(100% - var(--_p, 0%)) / 100% 200%,
-  linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
       no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.3s var(--_s, 0s) linear,
     background-size 0.3s calc(0.3s - var(--_s, 0s));
-  }
-  a:hover {
-  color: #ffffff!important;
+}
+
+a:hover,
+NavLink:hover {
+  color: #ffffff !important;
   --_p: 100%;
   --_s: 0.3s;
 }
 
 img {
-  pointer-events: none;
-  user-drag: none;
   -webkit-user-drag: none;
+  user-select: none;
 }
 
-ul li{
+ul li {
   list-style: none;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway.woff2") format("woff2");
+  font-display: swap;
+}
+
+input:-webkit-autofill
+{
+  background-color: inherit !important;
+  color: inherit !important;
 }

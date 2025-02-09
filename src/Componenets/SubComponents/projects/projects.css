@@ -1,0 +1,63 @@
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project-container {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 0;
+}
+
+.project-btns {
+    border: 3px solid #3563b1;
+    background-color: transparent;
+    border-radius: 13px;
+    color: #3563b1;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-btns:hover {
+    background-color: #3563b1;
+    color: white;
+}
+
+/* Ensure all cards have equal height */
+.project-card {
+    border: 2px solid white !important;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.project-card .card-body {
+    flex-grow: 1;
+}
+.project-card:hover {
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.897) !important;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-4,
+.col-md-6,
+.col-sm-12 {
+    display: flex;
+}
+

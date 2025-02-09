@@ -27,7 +27,7 @@ const TypingEffect = () => {
       } else if (charIndex === str.length && !isRemoving) {
         setTimeout(() => {
           setIsRemoving(true);
-        }, 2000); // Wait for 2 seconds after typing
+        }, 3000); 
       }
     };
 

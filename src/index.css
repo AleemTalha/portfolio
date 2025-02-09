@@ -2,6 +2,8 @@
   transition: all 0.3s ease !important;
 }
 body {
+  margin: 0;
+  padding: 0;
   background-color: #09122c !important;
 }
 ::selection {
@@ -41,8 +43,6 @@ a:hover {
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-
-/* Title Styles */
 #alertBox h1 {
   margin: 0;
   font: bold 1.2rem;
@@ -53,8 +53,6 @@ a:hover {
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
 }
-
-/* Message Styles */
 #alertBox p {
   font: 1rem;
   color: #ddd;
@@ -155,3 +153,12 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.lazy-img.loaded {
+  opacity: 1;
+}
+

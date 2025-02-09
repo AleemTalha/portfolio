@@ -7,7 +7,7 @@ const hobbies = () => {
       <div className="quote-section py-4 text-center text-lg-start row">
         <div
           className="col-lg-4 col-12 mt-2 mt-lg-0 d-flex justify-content-center align-items-center"
-          data-aos="fade-right"
+          data-aos="fade"
           data-aos-delay="0"
           data-aos-duration="1000"
         >
@@ -39,7 +39,7 @@ const hobbies = () => {
         </div>
         <div
           className="col-lg-4 col-12 d-flex mt-2 mt-lg-0 d justify-content-center align-items-center"
-          data-aos="fade-left"
+          data-aos="fade-down"
           data-aos-delay="400"
           data-aos-duration="1000"
         >

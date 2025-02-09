@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
 import "react-bootstrap";
 
 const Navbar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const getLinkClass = ({ isActive }) => {
     return isActive
       ? "activenav transition-all text-decoration-none"
       : "text-decoration-none transition-all";
   };
-
   const navLinks = [
     { to: "/", text: "Home", title: "Home - Your Website" },
     { to: "/about", text: "About", title: "About - Your Website" },
@@ -17,26 +17,33 @@ const Navbar = () => {
     { to: "/skills", text: "Skills", title: "Skills - Your Website" },
     { to: "/contact", text: "Contact Us", title: "Contact - Your Website" },
   ];
+  const toggleNavbar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
 
   return (
-    <nav className="sticky-top py-md-4 py-3 mb-2 navbar navbar-expand-lg navbar-light px-xl-5 px-lg-4 px-md-3 px-3 d-flex justify-content-between align-items-center p-0 m-0">
+    <nav
+      className={`fixed-top py-md-4 py-3 mb-2 navbar navbar-expand-lg navbar-light px-xl-5 px-lg-4 px-md-3 px-3 d-flex justify-content-between align-items-center p-0 m-0 `}
+      style={{background:`${isNavOpen ? "#034f84" : ""}`}}
+    >
       <NavLink
         to="/"
-        className="text-decoration-none brand transition-all cursor-pointer h4 me-5"
+        className="text-decoration-none brand transition-all cursor-pointer h4 me-5 NavLink"
         onClick={() => (document.title = "Home - Your Website")}
       >
         <span style={{ border: "0" }}>Aleem T.Dev</span>
       </NavLink>
 
       <button
-        className="navbar-toggler"
+        className="navbar-toggler navbar-btn"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
-        aria-expanded="false"
+        aria-expanded={isNavOpen ? "true" : "false"}
         aria-label="Toggle navigation"
         style={{ color: "white", backgroundColor: "white" }}
+        onClick={toggleNavbar}
       >
         <span className="navbar-toggler-icon v-hover"></span>
       </button>

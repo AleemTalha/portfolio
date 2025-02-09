@@ -19,7 +19,12 @@ const Education = () => {
   ]);
   
   return (
-    <div className="container-fluid m-0 p-3 pb-5" data-aos="fade-up" data-aos-duration="1000" style={{ background: "#872341" }}>
+    <div className="container-fluid m-0 p-3 pb-5" 
+    id="education"
+    data-aos="fade-up" 
+    data-aos-duration="1000"
+     style={{ background: "#872341" }}
+     >
       <h1 className="text-center text-decoration-underline pt-5">Education</h1>
       <h2 className="m-0 ps-lg-3 text-center text-lg-start pt-4">My Educational Journey and Aspirations</h2>
       <div className="row g-4 m-0 p-0 card-group w-100 pb-lg-5 pb-0">
@@ -31,7 +36,7 @@ const Education = () => {
               data-aos="fade-up"
               data-aos-delay={`${index * 200}`} 
               data-aos-duration="1000"
-              // data-aos-once="true"
+              data-aos-once="true"
             >
               <Card title={e.title} text={e.text} image={e.image} />
             </div>

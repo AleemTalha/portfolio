@@ -4,10 +4,6 @@ import "aos/dist/aos.css";
 import "./likes.css";
 
 const Likes = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
-  }, []);
-
   const [content] = useState([
     {
       title: "Audi R8",
@@ -26,11 +22,13 @@ const Likes = () => {
   ]);
 
   return (
-    <div className="pt-lg-5 pt-md-3 pt-2 pb-lg-5 pb-md-3 pb-2 like">
+    <div className="pt-lg-5 pt-md-3 pt-2 pb-lg-5 pb-md-3 pb-2 like"
+      data-aos="fade-up"
+    >
       <section className="row m-0">
         <div
-          className="display-3 fw-normal text-center"
-          style={{ color: "#fa004b" }}
+          className="display-3 fw-normal text-center text-decoration-underline"
+          style={{ color: "#ffeb3b" }}
           data-aos="fade-down"
         >
           Passion Points
@@ -43,8 +41,8 @@ const Likes = () => {
               data-aos="fade-right"
               data-aos-delay={index * 300}
             >
-              <div className="display-6 fw-normal" style={{ color: "#0055ff" }}>
-                {item.title}
+              <div className="display-6 fw-normal" style={{ color: "white" }}>
+                {item.title} :
               </div>
               {item.description.map((text, idx) => (
                 <div key={idx} className="fs">{text}</div>
@@ -67,18 +65,19 @@ const Likes = () => {
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
                     <img
-                      src="/garden 2.jpg"
+                    loading="lazy"
+                      src="\imgs\garden 2.webp"
                       alt="Garden View"
                       className="custom-img"
                     />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs">
-                      <h1>Garden</h1>
-                      <p>
+                    <div className="fs-custom">
+                      <div>Garden</div>
+                      <div>
                         A peaceful and refreshing place filled with lush greenery,
                         offering a perfect escape into nature.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -94,18 +93,19 @@ const Likes = () => {
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
                     <img
-                      src="/audi 2.jpg"
+                    loading="lazy"
+                      src="\imgs\audi 2.webp"
                       alt="Audi R8 Side Profile"
                       className="custom-img"
                     />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs">
-                      <h1>Audi R8</h1>
-                      <p>
+                    <div className="fs-custom">
+                      <div>Audi R8</div>
+                      <div>
                         A masterpiece of engineering with a sleek side profile,
                         showcasing speed, luxury, and power.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -121,18 +121,19 @@ const Likes = () => {
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
                     <img
-                      src="/audi 1.jpg"
+                    loading="lazy"
+                      src="imgs/audi 1.webp"
                       alt="Audi R8 Rear View"
                       className="custom-img"
                     />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs">
-                      <h1>Audi R8</h1>
-                      <p>
+                    <div className="fs-custom">
+                      <div>Audi R8</div>
+                      <div>
                         A breathtaking rear view with bold taillights and an
                         aggressive stance, built for high performance.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -148,18 +149,19 @@ const Likes = () => {
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
                     <img
-                      src="/garden.jpg"
+                    loading="lazy"
+                      src="imgs/garden.webp"
                       alt="Beautiful Garden"
                       className="custom-img"
                     />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs">
-                      <h1>Garden</h1>
-                      <p>
+                    <div className="fs-custom">
+                      <div>Garden</div>
+                      <div>
                         An enchanting garden filled with vibrant flowers and fresh
                         air, bringing tranquility and joy.
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>

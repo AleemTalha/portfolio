@@ -2,10 +2,11 @@ import React from "react";
 import "./journey.css";
 const journey = () => {
   return (
-    <div>
+    <div className="transition-all" data-aos="fade-up">
       <div
         className="row p-0 m-0 w-100 p-lg-5 p-md-3 p-3 "
         style={{ background: "#872341" }}
+        data-aos="fade-up"
       >
         <div
           className="display-4 fw-bold text-center pt-lg-5 pt-3 pb-lg-5 pb-3 text-decoration-underline"
@@ -36,7 +37,8 @@ const journey = () => {
         <div className="col-lg-5 pt-lg-4 pt-3 d-flex justify-content-center">
           <div className="journey-img border rounded-3">
             <img
-              src="/public/laptop1.jpg"
+              loading="lazy"
+              src="/imgs/laptop1.webp"
               className="w-100 rounded-3 bg-danger"
             />
           </div>

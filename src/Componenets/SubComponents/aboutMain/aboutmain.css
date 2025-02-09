@@ -33,33 +33,65 @@
   font-size: 1rem;
 }
 
+.about-main-section
+{
+  padding-top: 100px;
+}
+
 @media (max-width: 575px) {
-  .fs-custom {
+  .fs-custom-about {
       font-size: 1.15rem;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-  .fs-custom {
+  .fs-custom-about {
       font-size: 1.5rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .fs-custom {
+  .fs-custom-about {
       font-size: 2rem;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .fs-custom {
+  .fs-custom-about {
       font-size: 2.5rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .fs-custom {
+  .fs-custom-about {
       font-size: 3rem;
   }
 }
 
+@media (min-width: 600px) {
+  .about-main-section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-main-section {
+    padding-top: 100px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-main-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-main-section {
+    
+    padding-bottom: 130px;
+  }
+}

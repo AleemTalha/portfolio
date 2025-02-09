@@ -4,15 +4,17 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./aboutmain.css";
 const aboutMain = () => {
   return (
-    <div>
+    <div className="about-main-section">
       <div className="row p-0 m-0 g-0 p-lg-5 p-md-3 p-3 ">
         <div className="col-lg-12 text-center">
-          <div className="display-4">About Me</div>
-          <div className="fs-custom">
+          <div className="display-4" data-aos = "fade" data-aos-duration="1000" data-aos-delay="300">About Me</div>
+          <div className="fs-custom-about" data-aos="fade"  data-aos-duration="1000" data-aos-delay="300">
             <Typer />
           </div>
 
-          <div className="fs-5 pt-lg-5 pt-md-4 pt-3">
+          <div className="fs-5 pt-lg-5 pt-md-4 pt-3"
+           data-aos = "fade" data-aos-duration="1000" data-aos-delay="300"
+          >
             Hi, I'm Aleem. I am a web developer with a strong passion for
             creating easy-to-use and fast websites. From a young age, I have
             been fascinated by technology, which inspired me to build a career
@@ -33,6 +35,7 @@ const aboutMain = () => {
           </div>
           <div
             className="scroll-prompt pt-5"
+            data-aos="zoom-out"
             onClick={() => {
               window.scrollTo({
                 top: window.innerHeight,

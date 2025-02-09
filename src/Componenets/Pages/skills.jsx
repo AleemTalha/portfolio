@@ -1,9 +1,9 @@
 import React from 'react'
-
+import SkillsMain from "../SubComponents/skillsMain/skillsmain"
 const skills = () => {
   return (
     <div>
-      this is our skills page
+      
     </div>
   )
 }

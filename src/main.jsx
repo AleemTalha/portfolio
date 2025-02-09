@@ -1,13 +1,18 @@
-import { StrictMode, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import 'aos/dist/aos.css';
-import AOS from 'aos';
-AOS.init();
-import App from './App.jsx'
+import { StrictMode, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import "aos/dist/aos.css";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
-createRoot(document.getElementById('root')).render(
+import AOS from "aos";
+AOS.init();
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>
 );
