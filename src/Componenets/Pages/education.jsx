@@ -11,7 +11,7 @@ const Education = () => {
   }
   const { text, description } = educationData; 
   return (
-    <div className="container-fluid pt-5 mt-5">
+    <div className="container-fluid pb-3" style={{minHeight:"100vh" , paddingTop : "150px"}}>
       <div className="education-page">
       <h1 className="education-title">{title}</h1>
       <p className="education-text">{text}</p>

@@ -20,6 +20,11 @@ const CustomCard = (props) => {
           <p className="custom-card-text">{props.text}</p>
         </div>
         <Link
+          to={{
+            pathname: `/education/${props.title}`,
+            state: { title: props.title, text: props.text, image: props.image },
+          }}
+          onClick={()=>{alert(props.text)}}
           className="custom-edu-button"
           style={{ backgroundColor: "white", color: "#155b91" }}
         >
