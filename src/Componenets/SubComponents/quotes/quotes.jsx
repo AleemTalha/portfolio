@@ -3,7 +3,7 @@ import "./quotes.css";
 
 const hobbies = () => {
   return (
-    <div className="cd-section p-lg-5 p-md-3 p-2">
+    <div className="cd-section p-lg-5 p-md-3 p-2" style={{minHeight : "70vh"}}>
       <div className="quote-section py-4 text-center text-lg-start row">
         <div
           className="col-lg-4 col-12 mt-2 mt-lg-0 d-flex justify-content-center align-items-center"

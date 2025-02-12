@@ -1,72 +1,73 @@
 window.addEventListener("copy", (e) => {
   customAlert("Access denied... you've been hacked!", "Copying Disabled");
   if (e.clipboardData) {
-    e.clipboardData.setData(
-      "text/plain",
-      "Access denied... you've been hacked!"
-    );
+    e.clipboardData.setData("text/plain", "Access denied... you've been hacked!");
     e.preventDefault();
   }
 });
 
-
-// const navfunction = () => {
-//   if (window.innerWidth < 992) {
-//     document.querySelector("nav").style.background = "#034f84";
-//   } else {
-//     document.querySelector("nav").style.background = "#034f84";
-//   }
-// };
-
-// navfunction();
-// window.addEventListener("resize", navfunction);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    document.querySelector("nav").style.background = " #034f84";
-  } else {
-    document.querySelector("nav").style.background = "transparent";
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    if (nav) {
+      if (window.scrollY > 100) {
+        nav.style.background = "#034f84";
+      } else {
+        nav.style.background = "transparent";
+      }
+    }
+  });
 });
 
-function customAlert(txt, heading) {
-  var d = document;
+
+function scrollToTopSmooth() {
+  return new Promise((resolve) => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    const interval = setInterval(() => {
+      if (window.scrollY === 0) {
+        clearInterval(interval);
+        resolve();
+      }
+    }, 100);
+  });
+}
+
+async function customAlert(txt, heading) {
+  await scrollToTopSmooth();
   document.querySelector("body").style.overflow = "hidden";
-  if (d.getElementById("modalContainer")) return;
-  var mObj = d
-    .getElementsByTagName("body")[0]
-    .appendChild(d.createElement("div"));
+  if (document.getElementById("modalContainer")) return;
+  var mObj = document.createElement("div");
   mObj.id = "modalContainer";
-  mObj.style.height = d.documentElement.scrollHeight + "px";
-  var alertObj = mObj.appendChild(d.createElement("div"));
-  alertObj.style.background = "white";
+  mObj.style.height = document.documentElement.scrollHeight + "px";
+  document.body.appendChild(mObj);
+  var alertObj = document.createElement("div");
   alertObj.id = "alertBox";
-  if (d.all && !window.opera)
-    alertObj.style.top = document.documentElement.scrollTop + "px";
-  alertObj.style.left =
-    (d.documentElement.scrollWidth - alertObj.offsetWidth) / 2 + "px";
-  alertObj.style.visibility = "visible";
-  var h1 = alertObj.appendChild(d.createElement("h1"));
-  h1.appendChild(d.createTextNode(heading));
-  var msg = alertObj.appendChild(d.createElement("p"));
+  alertObj.style.background = "white";
+  mObj.appendChild(alertObj);
+  var h1 = document.createElement("h1");
+  h1.textContent = heading;
+  alertObj.appendChild(h1);
+  var msg = document.createElement("p");
   msg.innerHTML = txt;
-  var btn = alertObj.appendChild(d.createElement("a"));
+  alertObj.appendChild(msg);
+  var btn = document.createElement("a");
   btn.id = "closeBtn";
-  btn.appendChild(d.createTextNode("OK"));
+  btn.textContent = "OK";
   btn.href = "#";
-  btn.focus();
   btn.onclick = function () {
     removeCustomAlert();
     document.querySelector("body").style.overflow = "auto";
     return false;
   };
+  alertObj.appendChild(btn);
   alertObj.style.display = "block";
 }
 
 function removeCustomAlert() {
-  document
-    .getElementsByTagName("body")[0]
-    .removeChild(document.getElementById("modalContainer"));
+  var modal = document.getElementById("modalContainer");
+  if (modal) {
+    document.body.removeChild(modal);
+  }
 }
 
 window.addEventListener("contextmenu", function (event) {
@@ -75,7 +76,6 @@ window.addEventListener("contextmenu", function (event) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const lazyImages = document.querySelectorAll(".lazy-img");
-
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -86,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
   lazyImages.forEach((img) => {
     observer.observe(img);
   });

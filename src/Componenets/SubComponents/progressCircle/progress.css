@@ -1,12 +1,3 @@
-body {
-  background-color: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
 .container {
   display: flex;
   align-items: center;
@@ -33,8 +24,8 @@ body {
 }
 
 .inner {
-  width: 120px;
-  height: 120px;
+  width: 90%;
+  height: 90%;
   border-radius: 50%;
   background: #222;
   box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.2),
@@ -46,9 +37,18 @@ body {
 
 #number {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 10px;
   color: white;
-  font-size: 30px;
+  text-align: center;
+}
+
+#number div:first-child {
+  font-size: 16px; 
+}
+
+#number div:last-child {
+  font-size: 22px; 
+  font-weight: bold;
 }
 
 svg {
@@ -60,15 +60,48 @@ svg {
 
 circle {
   fill: none;
-  stroke: url("#GradientColor");
   stroke-width: 15px;
   stroke-dasharray: 450;
-  stroke-dashoffset: 450; 
-  animation: anim 2s linear forwards;   
+  stroke-dashoffset: 450;
+  transition: stroke-dashoffset 5s ease-in-out;
 }
 
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 157;
+@media (max-width: 768px) {
+  .skill {
+    width: 130px;
+    height: 130px;
   }
+
+  #number div:first-child {
+    font-size: 14px;
+  }
+
+  #number div:last-child {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill {
+    width: 110px;
+    height: 110px;
+  }
+
+  #number div:first-child {
+    font-size: 12px;
+  }
+
+  #number div:last-child {
+    font-size: 18px;
+  }
+
+  svg {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.progress-skill i
+{
+  color: white !important;
 }

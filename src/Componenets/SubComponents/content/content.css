@@ -1,0 +1,42 @@
+.custom-why-img {
+    max-width: 450px;
+    height: auto;
+  }
+  
+  @media (max-width: 1200px) {
+    .custom-why-img {
+      width: 400px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .custom-why-img {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-why-img {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .custom-why-img {
+      width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .custom-why-img {
+      width: 300px;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .custom-why-img {
+      width: 250px;
+      margin-top: 20px;
+    }
+  }

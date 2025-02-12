@@ -14,7 +14,7 @@ const Hero = () => {
             <div
               className="col-lg-6 text-center text-lg-start"
               data-aos="fade-up"
-              data-aos-duration="800" 
+              data-aos-duration="800"
               data-aos-delay="300"
             >
               <h1 className="p-0 m-0 display-6">

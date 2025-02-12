@@ -11,11 +11,19 @@ const Navbar = () => {
       : "text-decoration-none transition-all";
   };
   const navLinks = [
-    { to: "/", text: "Home", title: "Home - Your Website" },
-    { to: "/about", text: "About", title: "About - Your Website" },
-    { to: "/projects", text: "Projects", title: "Projects - Your Website" },
-    { to: "/skills", text: "Skills", title: "Skills - Your Website" },
-    { to: "/contact", text: "Contact Us", title: "Contact - Your Website" },
+    { to: "/", text: "Home", title: "Aleem T. Dev | Home" },
+    { to: "/about", text: "About", title: "About Me | Aleem T. Dev" },
+    { to: "/projects", text: "Projects", title: "My Projects | Aleem T. Dev" },
+    {
+      to: "/skills",
+      text: "Skills",
+      title: "My Skills & Expertise | Aleem T. Dev",
+    },
+    {
+      to: "/contact",
+      text: "Contact Us",
+      title: "Get in Touch | Aleem T. Dev",
+    },
   ];
   const toggleNavbar = () => {
     setIsNavOpen(!isNavOpen);
@@ -24,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed-top py-md-4 py-3 mb-2 navbar navbar-expand-lg navbar-light px-xl-5 px-lg-4 px-md-3 px-3 d-flex justify-content-between align-items-center p-0 m-0 `}
-      style={{background:`${isNavOpen ? "#034f84" : ""}`}}
+      style={{ background: `${isNavOpen ? "#034f84" : ""}` }}
     >
       <NavLink
         to="/"
@@ -68,11 +76,16 @@ const Navbar = () => {
 
       <div className="d-none d-lg-block">
         <NavLink
-          to="/contact"
           className="h6 transition-all text-decoration-none bg-danger rounded Contact-btn"
-          onClick={() => (document.title = "Contact - Your Website")}
+          to="#"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/aleem-cv.pdf";
+            link.download = "aleem-cv.pdf"; 
+            link.click();
+          }}
         >
-          Contact Us
+          Download CV
         </NavLink>
       </div>
     </nav>

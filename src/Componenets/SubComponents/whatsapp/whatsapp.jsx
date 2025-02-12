@@ -3,7 +3,7 @@ import "./whatsapp.css"
 const whatsapp = () => {
   return (
     <div>
-      <a className="bi bi-whatsapp wa-icon transition-all" href="https://wa.me/923270445135" target='_blank'></a>
+      <a className="bi bi-whatsapp wa-icon transition-all" href={import.meta.env.VITE_WHATSAPP_LINK} target='_blank'></a>
     </div>
   )
 }

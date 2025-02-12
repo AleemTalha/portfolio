@@ -9,7 +9,7 @@
 
 .contact-main {
   min-height: 90vh;
-  width: 100vw;
+  min-width: 99vw;
 }
 
 .contact-img-container {

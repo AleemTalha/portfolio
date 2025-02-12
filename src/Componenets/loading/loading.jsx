@@ -1,24 +1,51 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import "./loading.css";
+const Loading = ({ onComplete }) => {
+  const [show, setShow] = useState(true);
+  useEffect(() => {
+    const loadImages = async () => {
+      const imagesToLoad = [
+        "/imgs/Aleem.jpg",
+        "/imgs/audi 1.webp",
+        "/imgs/audi 2.webp",
+        "/imgs/carousel-1.webp",
+        "/imgs/carousel-2.webp",
+        "/imgs/cta-bg.webp",
+        "/imgs/Dsa pic.png",
+        "/imgs/garden 2.webp",
+        "/imgs/garden.webp",
+        "/imgs/hero-bg.webp",
+        "/imgs/hero-img.png",
+        "/imgs/laptop1.webp",
+        "/imgs/me.jpg",
+        "/imgs/react-bg.png",
+      ];
 
-const Loading = () => {
+      const imagePromises = imagesToLoad.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      });
+
+      await Promise.all(imagePromises);
+      setTimeout(() => {
+        setShow(false);
+        if (onComplete) onComplete();
+      }, 2500);
+    };
+
+    loadImages();
+  }, [onComplete]);
+
   return (
-    <motion.div
-      className="loading-container d-flex flex-column align-items-center justify-content-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="spinner-border text-primary loading-spinner" role="status"></div>
-      <motion.p
-        className="mt-3 loading-text"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
-        Loading projects...
-      </motion.p>
-    </motion.div>
+    show && (
+      <div className="loading-screen">
+        <div className="loading-line"></div>
+      </div>
+    )
   );
 };
 

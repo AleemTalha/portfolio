@@ -1,175 +1,82 @@
-import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import "./likes.css";
 
 const Likes = () => {
-  const [content] = useState([
-    {
-      title: "Audi R8",
-      description: [
-        "The Audi R8 is a dream car for me. Its design and performance have always impressed me. The R8 is a luxury sports car with a V10 engine and offers an exhilarating driving experience. Its stability and handling in high-speed runs and cornering are unmatched.",
-        "The engineering of the R8 is top-notch, and it gives you a constant feeling of high performance. The sleek looks of the car are absolutely jaw-dropping. It's the perfect blend of comfort and speed for those who appreciate both.",
-      ],
-    },
-    {
-      title: "Gardening",
-      description: [
-        "Gardening is not just a hobby for me, it's a passion. Whenever I grow plants or design new flower beds, I find peace and fulfillment. It’s a way to connect with nature and learn something new every day.",
-        "The satisfaction I get from gardening is unmatched. Growing plants, taking care of them, and building something with my hands is something I truly value. It helps me reduce stress and also makes my surroundings more beautiful.",
-      ],
-    },
-  ]);
-
   return (
-    <div className="pt-lg-5 pt-md-3 pt-2 pb-lg-5 pb-md-3 pb-2 like"
-      data-aos="fade-up"
-    >
-      <section className="row m-0">
-        <div
-          className="display-3 fw-normal text-center text-decoration-underline"
-          style={{ color: "#ffeb3b" }}
-          data-aos="fade-down"
-        >
-          Passion Points
+    <div className="container">
+      <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-lg-6 text-center">
+          <h1 className="fw-bold text-decoration-underline">Hobbies and What I Like</h1>
+          <p className="fs-5 mt-3">
+            I have always been fascinated by the elegance and power of luxury cars, especially Audi. Their sleek designs, advanced technology, and high-speed performance make them a true masterpiece on the road. Driving an Audi is not just about transportation; it's an experience that blends comfort and thrill perfectly.
+          </p>
+          <p className="fs-5 mt-3">
+            Apart from my love for cars, I find peace and relaxation in gardening. The sight of lush green plants and vibrant flowers is incredibly refreshing. Gardening is more than a hobby for me; it’s a way to connect with nature, relieve stress, and create a serene environment around me.
+          </p>
         </div>
-        <div className="col-lg-6 text-xl-start text-center pt-xl-5 pt-lg-4 pt-md-3 pt-sm-2 pt-1">
-          {content.map((item, index) => (
-            <div
-              key={index}
-              className="container-fluid mt-4"
-              data-aos="fade-right"
-              data-aos-delay={index * 300}
-            >
-              <div className="display-6 fw-normal" style={{ color: "white" }}>
-                {item.title} :
-              </div>
-              {item.description.map((text, idx) => (
-                <div key={idx} className="fs">{text}</div>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div
-          className="col-lg-6 d-flex justify-content-center align-items-center"
-          data-aos="fade"
-          data-aos-delay="300"
-        >
-          <div className="img-container row g-0 pt-xl-5 pt-lg-4 pt-md-3 pt-sm-2 pt-1">
-            <div
-              className="col-6 img-wrapper-1 p-2 img-1"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div className="flip-card">
+
+        <div className="col-lg-6">
+          <div className="row m-0">
+            <div className="col-6 mb-4 d-flex justify-content-end">
+              <div className="flip-card flip-card-1">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img
-                    loading="lazy"
-                      src="\imgs\garden 2.webp"
-                      alt="Garden View"
-                      className="custom-img"
-                    />
+                    <img src="/imgs/garden.png" alt="Gardening" />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs-custom">
-                      <div>Garden</div>
-                      <div>
-                        A peaceful and refreshing place filled with lush greenery,
-                        offering a perfect escape into nature.
-                      </div>
-                    </div>
+                    <h1>Gardening</h1>
+                    <p>Peace & Serenity</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div
-              className="col-6 img-wrapper-2 p-2 img-2"
-              data-aos="zoom-in"
-              data-aos-delay="500"
-            >
-              <div className="flip-card">
+            <div className="col-6 mb-4 d-flex justify-content-start align-items-end">
+              <div className="flip-card flip-card-2">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img
-                    loading="lazy"
-                      src="\imgs\audi 2.webp"
-                      alt="Audi R8 Side Profile"
-                      className="custom-img"
-                    />
+                    <img src="/imgs/audi 2.png" alt="Audi" />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs-custom">
-                      <div>Audi R8</div>
-                      <div>
-                        A masterpiece of engineering with a sleek side profile,
-                        showcasing speed, luxury, and power.
-                      </div>
-                    </div>
+                    <h1>Audi Car</h1>
+                    <p>Luxury & Speed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row m-0">
+            <div className="col-6 mb-4 d-flex justify-content-end">
+              <div className="flip-card flip-card-1">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <img src="/imgs/audi 1.png" alt="Audi" />
+                  </div>
+                  <div className="flip-card-back">
+                    <h1>Audi Car</h1>
+                    <p>Luxury & Speed</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div
-              className="col-6 img-wrapper-1 p-2 img-3"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-            >
-              <div className="flip-card">
+            <div className="col-6 mb-4">
+              <div className="flip-card flip-card-2">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <img
-                    loading="lazy"
-                      src="imgs/audi 1.webp"
-                      alt="Audi R8 Rear View"
-                      className="custom-img"
-                    />
+                    <img src="/imgs/garden 2.png" alt="Gardening" />
                   </div>
                   <div className="flip-card-back">
-                    <div className="fs-custom">
-                      <div>Audi R8</div>
-                      <div>
-                        A breathtaking rear view with bold taillights and an
-                        aggressive stance, built for high performance.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-6 img-wrapper-2 p-2 img-4"
-              data-aos="zoom-in"
-              data-aos-delay="700"
-            >
-              <div className="flip-card">
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <img
-                    loading="lazy"
-                      src="imgs/garden.webp"
-                      alt="Beautiful Garden"
-                      className="custom-img"
-                    />
-                  </div>
-                  <div className="flip-card-back">
-                    <div className="fs-custom">
-                      <div>Garden</div>
-                      <div>
-                        An enchanting garden filled with vibrant flowers and fresh
-                        air, bringing tranquility and joy.
-                      </div>
-                    </div>
+                    <h1>Gardening</h1>
+                    <p>Nature & Relaxation</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

@@ -38,7 +38,7 @@ const TypingEffect = () => {
         setCharIndex((prevIndex) => prevIndex - 1);
       } else if (charIndex === 0 && isRemoving) {
         setIsRemoving(false);
-        setTextIndex((prevIndex) => (prevIndex + 1) % texts.length); // Go to next text
+        setTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
         setTimeout(() => {
           typeText(); 
         }, 500);

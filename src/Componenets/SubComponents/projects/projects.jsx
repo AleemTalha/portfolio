@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import Loading from "../../loading/loading";
-
 import "./projects.css";
 
 const Projects = () => {
@@ -25,7 +23,7 @@ const Projects = () => {
       setIsLoading(false);
 
       setTimeout(() => {
-        setShowResults(true); 
+        setShowResults(true);
       }, 500);
     }, 1000);
 
@@ -66,7 +64,7 @@ const Projects = () => {
         </div>
       </motion.div>
       <div className="text-center d-flex justify-content-center mb-3">
-        <div className="w-50 d-lg-flex justify-content-between d-none ">
+        <div className="w-50 d-lg-flex justify-content-between d-none">
           {["C++", "JavaScript", "C#"].map((category) => (
             <motion.button
               key={category}
@@ -84,7 +82,11 @@ const Projects = () => {
       <h2>Projects</h2>
 
       {isLoading ? (
-        <Loading /> 
+        <div className="spinner-container">
+          <div className="spinner">
+            <div className="spinner1"></div>
+          </div>
+        </div>
       ) : showResults ? (
         <div className="row p-0 m-0 g-3 justify-content-start position-relative">
           {filteredProjects.length > 0 ? (
@@ -99,7 +101,6 @@ const Projects = () => {
                 {index < filteredProjects.length - 1 && (
                   <div className="connector"></div>
                 )}
-
                 <div className="card shadow-lg border-0 project-card">
                   <div className="card-body">
                     <h5 className="card-title text-primary">{i.title}</h5>
@@ -110,12 +111,12 @@ const Projects = () => {
                     whileTap={{ scale: 0.95 }}
                     className="mb-3"
                   >
-                    <NavLink
+                    {/* <NavLink
                       to={`/projects/${i.id}`}
                       className="btn btn-outline-primary w-75"
                     >
                       View Details
-                    </NavLink>
+                    </NavLink> */}
                   </motion.div>
                 </div>
               </motion.div>

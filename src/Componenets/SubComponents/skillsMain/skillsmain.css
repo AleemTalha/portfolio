@@ -1,0 +1,79 @@
+.skill-container {
+  background-image: url("/imgs/10310009.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.skillsinside {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.764);
+}
+.skill-container img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .skill-container img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .skill-container img {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-container img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-container img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.skill-container .btn i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-container .btn:hover i {
+  transform: rotate(360deg);
+  color: #fff;
+}
+
+.skill-container .btn:active i {
+  transform: rotate(180deg);
+}
+
+.view-skills
+{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    padding: 7px 15px;
+    transition: all 1s ease;
+}
+.view-skills:hover
+{
+    background-color: #13598f;
+    box-shadow: 5px 5px 50px #13598f;
+}
+
+@media (min-height: 1000px)  and (min-width : 600px) {
+    .skillsinside
+    {
+        height: 60vh !important;
+        background: blue;
+    }
+}

@@ -16,9 +16,9 @@ const ProjectData = [
         "img": "/imgs/shopping-app.webp"
     },
     {
-        "title": "DSA Project",
+        "title": "Banking App (DSA Project)",
         "id": nanoid(),
-        "Description": "A data structures and algorithms project in C++, implementing various structures for efficient data management.",
+        "Description": "Banking app designed with data structures and algorithms project in C++, implementing various structures for efficient data management. Here the users can send their money just by one click through their device.",
         "Structures": "Linked Lists, Trees, Graphs, Sorting Algorithms",
         "img": "/imgs/dsa-project.webp"
     },

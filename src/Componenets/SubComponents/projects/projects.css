@@ -1,63 +1,97 @@
 .description {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-container {
-    max-width: 1200px;
-    min-height: 100vh;
-    margin: auto;
-    padding: 0;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 0;
 }
 
 .project-btns {
-    border: 3px solid #3563b1;
-    background-color: transparent;
-    border-radius: 13px;
-    color: #3563b1;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  border: 3px solid #3563b1;
+  background-color: transparent;
+  border-radius: 13px;
+  color: #3563b1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .project-btns:hover {
-    background-color: #3563b1;
-    color: white;
+  background-color: #3563b1;
+  color: white;
 }
 
 /* Ensure all cards have equal height */
 .project-card {
-    border: 2px solid white !important;
-    color: white;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  border: 2px solid white !important;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .project-card .card-body {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 .project-card:hover {
-    color: white;
-    transform: translateY(-10px);
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.897) !important;
+  color: white;
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.897) !important;
 }
 .row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .col-lg-4,
 .col-md-6,
 .col-sm-12 {
-    display: flex;
+  display: flex;
 }
 
+.spinner-container
+{
+    margin-top:50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  width: 100px;
+  height: 100px;
+  animation: spinning82341 1.7s linear infinite;
+  text-align: center;
+  border-radius: 50px;
+  filter: blur(1px);
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255),
+    0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+  background-color: rgb(36, 36, 36);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}

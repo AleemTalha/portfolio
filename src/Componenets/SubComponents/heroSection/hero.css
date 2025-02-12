@@ -2,7 +2,7 @@
   animation: moveUpDown 3s infinite ease-in-out;
   align-self: center;
   justify-self: center;
-  width: 600px;
+  width: 470px;
 }
 
 .elong:hover {
@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 800px) {
-  .hero-img { width: 100%; }
+  .hero-img { width: 70%; }
 }
 
 .btn-hover {

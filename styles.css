@@ -3,7 +3,7 @@
 
 body {
   font-family: "Raleway", sans-serif !important;
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FFEB3B" stroke="%23034F84" stroke-width="3"></circle></svg>')
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="%23FFEB3B" stroke="%23034F84" stroke-width="3"></circle></svg>')
       12 12,
     auto !important;
   margin: 0;
@@ -20,7 +20,7 @@ body {
 
 a:hover,
 button:hover {
-  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="%23FFEB3B" stroke-width="3"></circle></svg>')
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="%23FFEB3B" stroke-width="3"></circle></svg>')
       12 12,
     auto !important;
 }
@@ -74,14 +74,14 @@ ul li {
   list-style: none;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url("Raleway.woff2") format("woff2");
-  font-display: swap;
-}
 
 input:-webkit-autofill
 {
   background-color: inherit !important;
   color: inherit !important;
+}
+
+input::selection
+{
+  background-color: blue;
 }

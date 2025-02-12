@@ -124,3 +124,18 @@
     transform: scale(1.03) !important;
     filter: drop-shadow(5px 5px 20px  #7e8403);
 }
+
+.custom-edu-button {
+  background-color: white;
+  color: #155b91 !important;
+  text-decoration: none;
+  border: 2px solid #155b91;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-edu-button:hover {
+  background-color: #155b91 !important;
+  color: white;
+}
