@@ -14,10 +14,9 @@ const Loading = ({ onComplete }) => {
         "/imgs/Dsa pic.png",
         "/imgs/garden 2.png",
         "/imgs/garden.png",
-        "/imgs/hero-bg.png",
+        "/imgs/hero-bg.webp",
         "/imgs/hero-img.png",
         "/imgs/laptop1.png",
-        "/imgs/me.jpg",
         "/imgs/react-bg.png",
       ];
 
