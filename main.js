@@ -1,7 +1,10 @@
 window.addEventListener("copy", (e) => {
   customAlert("Access denied... you've been hacked!", "Copying Disabled");
   if (e.clipboardData) {
-    e.clipboardData.setData("text/plain", "Access denied... you've been hacked!");
+    e.clipboardData.setData(
+      "text/plain",
+      "Access denied... you've been hacked!"
+    );
     e.preventDefault();
   }
 });
@@ -19,10 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 function scrollToTopSmooth() {
   return new Promise((resolve) => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     const interval = setInterval(() => {
       if (window.scrollY === 0) {
         clearInterval(interval);
@@ -70,16 +72,18 @@ function removeCustomAlert() {
   }
 }
 
-const element = document.querySelector('#yourElement');
-const height = element.offsetHeight;
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.querySelector("#yourElement");
 
-requestAnimationFrame(() => {
-    element.style.height = `${height + 20}px`;
+  if (element) {
+    const height = element.offsetHeight;
+    requestAnimationFrame(() => {
+      element.style.height = `${height + 20}px`;
+    });
+
+    element.addEventListener("touchstart", (event) => {}, { passive: true });
+  }
 });
-
-element.addEventListener('touchstart', (event) => {
-}, { passive: true });
-
 
 window.addEventListener("contextmenu", function (event) {
   event.preventDefault();
