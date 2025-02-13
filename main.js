@@ -70,6 +70,17 @@ function removeCustomAlert() {
   }
 }
 
+const element = document.querySelector('#yourElement');
+const height = element.offsetHeight;
+
+requestAnimationFrame(() => {
+    element.style.height = `${height + 20}px`;
+});
+
+element.addEventListener('touchstart', (event) => {
+}, { passive: true });
+
+
 window.addEventListener("contextmenu", function (event) {
   event.preventDefault();
 });
