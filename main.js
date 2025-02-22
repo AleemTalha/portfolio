@@ -34,7 +34,7 @@ function scrollToTopSmooth() {
   });
 }
 
-async function customAlert(txt, heading) {
+export async function customAlert(txt, heading) {
   await scrollToTopSmooth();
   document.querySelector("body").style.overflow = "hidden";
   if (document.getElementById("modalContainer")) return;
@@ -65,7 +65,7 @@ async function customAlert(txt, heading) {
   alertObj.style.display = "block";
 }
 
-function removeCustomAlert() {
+export function removeCustomAlert() {
   var modal = document.getElementById("modalContainer");
   if (modal) {
     document.body.removeChild(modal);
@@ -105,3 +105,5 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(img);
   });
 });
+
+

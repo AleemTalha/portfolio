@@ -1,15 +1,16 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import {customAlert } from "../../../../main"
 import "./contactmain.css";
 
 const ContactMain = () => {
+  // customAlert("Hello", "There");
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setIsSending(true);
-
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -35,9 +36,7 @@ const ContactMain = () => {
 
   return (
     <div className="contact-main pt-5 mt-5 row mx-0 px-0 g-0 text-light">
-      <div className="col-12 text-center display-1 p-lg-5">
-        Get In Touch
-      </div>
+      <div className="col-12 text-center display-1 p-lg-5">Get In Touch</div>
 
       <div className="col-lg-4 m-0 d-flex flex-column align-items-center text-center p-4  rounded">
         <div className="contact-img-container mb-3 overflow-hidden">
@@ -95,9 +94,7 @@ const ContactMain = () => {
       </div>
       <div className="col-lg-8 p-0 g-0">
         <div className="container-fluid p-4 d-flex justify-content-center flex-column rounded-2 h-100 w-100">
-          <h3 className="mb-4 text-center  display-6 pt-4">
-            Contact Me
-          </h3>
+          <h3 className="mb-4 text-center  display-6 pt-4">Contact Me</h3>
           <form ref={form} onSubmit={sendEmail} className="px-3">
             <div className="row">
               <div className="mb-3 col-lg-6">

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Typer from "../typingeffect/typingeffect";
+import heroImage from "/imgs/hero-img.png";
 import "./hero.css";
 
 const Hero = () => {
@@ -49,7 +50,7 @@ const Hero = () => {
               data-aos-delay="300"
               data-aos-duration="500"
             >
-              <img src="/imgs/hero-img.png" loading="lazy" className="hero-img" alt="Hero" />
+              <img src={heroImage} loading="lazy" className="hero-img" alt="Hero" />
             </div>
           </section>
         </div>
