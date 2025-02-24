@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -19,47 +18,35 @@ import Skills from "./Componenets/Pages/skills";
 import Projects from "./Componenets/Pages/project";
 import Whatsapp from "./Componenets/SubComponents/whatsapp/whatsapp";
 import Footer from "./Componenets/SubComponents/footer/footer";
-import Loading from "./Componenets/loading/loading";
 import Education from "./Componenets/Pages/education";
-const PageWrapper = ({ children }) => {
-  const location = useLocation();
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 800);
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-  return loading ? <Loading /> : children;
-};
 
 function App() {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <Router>
-      <PageWrapper>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/education/:title" element={<Education />}/>
-          <Route
-            path="*"
-            element={
-              <div className="text-center pt-5 mt-5 text-light">
-                <h1>404 - Page Not Found</h1>
-                <p>The page you are looking for does not exist.</p>
-              </div>
-            }
-          />
-        </Routes>
-        <Whatsapp />
-        <Footer />
-      </PageWrapper>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/education/:title" element={<Education />} />
+        <Route
+          path="*"
+          element={
+            <div className="text-center pt-5 mt-5 text-light">
+              <h1>404 - Page Not Found</h1>
+              <p>The page you are looking for does not exist.</p>
+            </div>
+          }
+        />
+      </Routes>
+      <Whatsapp />
+      <Footer />
     </Router>
   );
 }
