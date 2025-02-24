@@ -43,7 +43,7 @@ html {
 }
 
 a,
-NavLink {
+NavLink,Link {
   font-weight: normal;
   --b: 0.1em;
   --c: #ffffff;
@@ -59,7 +59,7 @@ NavLink {
 }
 
 a:hover,
-NavLink:hover {
+NavLink:hover ,Link:hover{
   color: #ffffff !important;
   --_p: 100%;
   --_s: 0.3s;
