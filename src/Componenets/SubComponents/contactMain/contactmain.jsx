@@ -42,7 +42,6 @@ const ContactMain = () => {
         <div className="contact-img-container mb-3 overflow-hidden">
           <img
             src="/imgs/Aleem.jpg"
-            loading="lazy"
             className="w-100 laptop-img"
             alt="Aleem Talha"
           />

@@ -50,7 +50,7 @@ const Hero = () => {
               data-aos-delay="300"
               data-aos-duration="500"
             >
-              <img src={heroImage} loading="lazy" className="hero-img" alt="Hero" />
+              <img src={heroImage} className="hero-img" alt="Hero" />
             </div>
           </section>
         </div>

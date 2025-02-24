@@ -9,7 +9,6 @@ const CustomCard = (props) => {
       {props.image && (
         <img
           className="custom-card-img"
-          loading="lazy"
           src={props.image}
           alt="Card"
         />

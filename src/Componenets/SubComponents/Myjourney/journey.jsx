@@ -41,7 +41,6 @@ const Journey = () => {
         <div className="col-lg-5 pt-lg-4 pt-3 d-flex justify-content-center">
           <div className="journey-img border rounded-3 overflow-hidden">
             <img
-              loading="lazy"
               src="/imgs/laptop1.png"
               className="w-100 rounded-3 bg-danger laptop-img"
               alt="Laptop"
